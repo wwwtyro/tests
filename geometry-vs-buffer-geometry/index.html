@@ -1,0 +1,16 @@
+
+<html>
+    <head>
+        <script src="three-r68.js"></script>
+        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    <body>
+        <canvas id="render-canvas"></canvas>
+        <div style="position: fixed; top: 0px; left: 0px; color: white">
+            <input type="checkbox" id="use-buffer-geometry"> use BufferGeometry
+        </div>
+        <div style="position: fixed; bottom: 10%; left: 10%; right: 10%; color: white">
+            Each triangle in the above cube is a unique geometry - either a THREE.Geometry or a THREE.BufferGeometry, depending on the checkbox at the top left. Upon profiling, I see an idle time of 50% for Geometry, and an idle time of 0% with BufferGeometry. When using BufferGeometry, most of the CPU is taken up by setupVertexAttributes (~50%).
+        <div>
+    </body>
+</html>
