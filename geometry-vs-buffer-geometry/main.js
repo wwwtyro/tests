@@ -25,7 +25,7 @@ window.onload = function() {
 
     var material = new THREE.MeshBasicMaterial({
         color: 0x0088ff,
-        shading: THREE.FlatShading
+        side: THREE.DoubleSide
     });
 
     for (var i = 0; i < N; i++) {
